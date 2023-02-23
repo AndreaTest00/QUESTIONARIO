@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Link Casuale</title>
+</head>
+<body>
+    <script>
+       var link1 = "https://docs.google.com/forms/d/e/1FAIpQLSdF2sREa2CXRJ8f9AReZkvWbv56UIx5RBA24ceN2kvDReKHxg/viewform?usp=sf_link";
+       var link2 = "https://forms.gle/1evuYjfHRVM6Kwki6";
+       var visitedLink = localStorage.getItem("visitedLink");
+
+       if (visitedLink === link1) {
+           window.location.href = link1;
+       } else if (visitedLink === link2) {
+           window.location.href = link2;
+       } else {
+           var randomLink = Math.random() < 0.5 ? link1 : link2;
+           localStorage.setItem("visitedLink", randomLink);
+           window.location.href = randomLink;
+       }
+    </script>
+</body>
+</html>
