@@ -6,14 +6,14 @@
 </head>
 <body>
     <script>
-       var link1 = "https://docs.google.com/forms/d/e/1FAIpQLSdF2sREa2CXRJ8f9AReZkvWbv56UIx5RBA24ceN2kvDReKHxg/viewform?usp=sf_link";
-       var link2 = "https://forms.gle/1evuYjfHRVM6Kwki6";
+       var link1 = "https://forms.office.com/e/h2mtdwHNp9";
+       var link2 = "https://forms.office.com/e/dR5VQmPCaX";
        var visitedLink = localStorage.getItem("visitedLink");
 
        if (visitedLink === link1) {
-           document.write("Grazie per aver risposto al sondaggio 1.");
+           document.write("Grazie per aver risposto al sondaggio.");
        } else if (visitedLink === link2) {
-           document.write("Grazie per aver risposto al sondaggio 2.");
+           document.write("Grazie per aver risposto al sondaggio.");
        } else {
            var randomLink = Math.random() < 0.5 ? link1 : link2;
            localStorage.setItem("visitedLink", randomLink);
